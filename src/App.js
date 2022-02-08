@@ -1,16 +1,16 @@
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Form from "./Components/Form";
-import  "./App.css";
-
+import "./App.css";
+import ThemeContextProvider from "./Context/ThemeContext";
 
 function App() {
   return (
-    <div>
-        <h1 className="text-center my-3 pb-3">To Do List</h1>
+    <>
+      <ThemeContextProvider>
         <Form />
-    </div>
-
-)
+      </ThemeContextProvider>
+    </>
+  );
 }
 
 export default App;
