@@ -6,6 +6,7 @@ import BtnToggle from "./BtnToggle";
 import React, { useContext } from "react";
 import { ThemeContext } from "../Context/ThemeContext";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FirebaseDatabaseMutation } from "@react-firebase/database";
 
 
 export default function Form() {
@@ -55,6 +56,18 @@ export default function Form() {
 
   return (
     <div className="m-auto my-5 px-4 col-12 col-sm-10 col-lg-6">
+      {/* <FirebaseDatabaseMutation type="push" path="tasks">
+      {({ runMutation }) => {
+          return (
+            <>
+            <button>Créér</button>
+            </>
+          )
+        }}
+      </FirebaseDatabaseMutation> */}
+
+
+
       <BtnToggle />
       <h1 className="text-center my-3 pb-3">To Do List</h1>
       <FontAwesomeIcon icon="fa-solid fa-sun-bright" />
@@ -74,6 +87,10 @@ export default function Form() {
           Ajouter
         </button>
       </form>
+
+
+
+      
       <ul className="list-group mt-2">
         {datas.map((data) => {
           return (
